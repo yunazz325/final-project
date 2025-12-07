@@ -1,4 +1,4 @@
-// Skills 高亮逻辑
+// Skills highlight
 document.addEventListener("DOMContentLoaded", () => {
     const skillTags = document.querySelectorAll(".skill-tag");
     const expCards  = document.querySelectorAll(".exp-card");
@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             clearHighlights();
 
-            // 把对应的 skill-tag 加上 highlight
             skillTags.forEach(tag => {
                 const key = tag.getAttribute("data-skill");
                 if (skillKeys.includes(key)) {
@@ -26,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         card.addEventListener("mouseleave", () => {
-            // 鼠标移走后，可以取消高亮，也可以选择保留最后一个
             clearHighlights();
         });
     });
